@@ -1,0 +1,35 @@
+﻿<Window x:Class="Sudoku2.HomeScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sudoku2"
+        mc:Ignorable="d"
+        Title="HomeScreen" MinWidth="200" MinHeight="300" MaxHeight="400" MaxWidth="400" Height="400" Width="400">
+    <Grid Name="root" Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*">
+            </RowDefinition>
+            <RowDefinition Height="3*">
+            </RowDefinition>
+            <RowDefinition Height="1*">
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Column="1" Content="S U D O K U" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="48" FontWeight="Bold" FontFamily="Impact"/>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBox HorizontalAlignment="Center" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120" Name="Input"/>
+            <Button Content="Play!" HorizontalAlignment="Center"  Grid.Row="1" VerticalAlignment="Center" Width="100" Click="Button_Click"/>
+            <Button Content="How to Play" HorizontalAlignment="Center"  Grid.Row="2" VerticalAlignment="Center" Width="100" Click="Button_Click_1"/>
+        </Grid>
+    </Grid>
+</Window>
